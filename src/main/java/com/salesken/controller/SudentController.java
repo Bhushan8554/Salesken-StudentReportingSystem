@@ -13,7 +13,7 @@ import com.salesken.service.StudentService;
 @Controller
 public class SudentController{
 
-	@Autowired
+	@Autowired(required = false)
 	StudentService studentService;
 	
 	

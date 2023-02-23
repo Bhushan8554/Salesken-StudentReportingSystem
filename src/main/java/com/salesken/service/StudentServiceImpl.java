@@ -10,7 +10,7 @@ import com.salesken.repository.StudentRepository;
 
 public class StudentServiceImpl implements StudentService{
 
-	@Autowired
+	@Autowired(required = false)
 	StudentRepository studentRepository;
 	@Override
 	public Student addStudent(Student student)throws StudentException {
