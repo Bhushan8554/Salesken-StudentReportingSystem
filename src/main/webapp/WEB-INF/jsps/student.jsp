@@ -43,6 +43,14 @@
         <form:input type="number" placeholder="roll no" path="roll"/><br>
         <form:input type="text" placeholder="name" path="name"/><br>
         <form:input type="text" placeholder="address" path="address"/><br>
+
+        <form:input type="number" placeholder="Sem1 math" path="semister1.math"/><br>
+        <form:input type="number" placeholder="Sem1 english" path="semister1.english"/><br>
+        <form:input type="number" placeholder="Sem1 science" path="semister1.science"/><br>
+
+        <form:input type="number" placeholder="Sem2 math" path="semister2.math"/><br>
+        <form:input type="number" placeholder="Sem2 english" path="semister2.english"/><br>
+        <form:input type="number" placeholder="Sem2 science" path="semister2.science"/><br>
         <form:button>add</form:button>
     </form:form>
 

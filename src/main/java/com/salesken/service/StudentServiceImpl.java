@@ -1,5 +1,6 @@
 package com.salesken.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,21 @@ public class StudentServiceImpl implements StudentService{
 			throw new StudentException("Student already exist");
 		}
 		return studentRepository.save(student);
+	}
+
+	@Override
+	public Student getStudent(Integer roll) throws StudentException {
+		Optional< Student> w=studentRepository.findById(roll);
+		if(w.isEmpty()) {
+			throw new StudentException("Student not exist");
+		}
+		return w.get();
+	}
+
+	@Override
+	public List<Student> getAllStudent() throws StudentException {
+		List<Student> list=(List<Student>) studentRepository.findAll();
+		return list;
 	}
 
 }

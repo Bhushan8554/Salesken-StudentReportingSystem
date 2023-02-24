@@ -36,20 +36,18 @@
         <button>
             <a href="/student">Add Student</a>
         </button><br>
-        <button>
-            Add Student Marks
-        </button><br>
-       <form action="">
-            <input type="number" placeholder="Roll no">
+        
+       <form action="/report" method="post">
+            <input type="number" placeholder="Roll no" name="studentRoll">
             <input type="submit" value="See report of Student">
        </form>
-       <form action="">
-        <input type="number" placeholder="Semister no">
+       <form action="/avg" method="post">
+        <input type="number" placeholder="Semister no" name="sem">
         <input type="submit" value="% of class">
        </form>
-       <form action="">
+       <form action="marks" method="post">
        
-        <select name="cars" id="cars">
+        <select name="sub" id="sub">
             <option value="english">english</option>
             <option value="math">math</option>
             <option value="science">science</option>
