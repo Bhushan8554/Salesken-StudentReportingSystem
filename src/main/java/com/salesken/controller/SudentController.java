@@ -26,5 +26,9 @@ public class SudentController{
 	public String addStudentController() {
 		return "student";
 	}
+	@GetMapping("/")
+	public String homePage() {
+		return "home";
+	}
 
 }

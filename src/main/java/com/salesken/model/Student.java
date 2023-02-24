@@ -6,8 +6,11 @@ import java.util.Map;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
+import lombok.NoArgsConstructor;
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Document(indexName = "student")
 public class Student {
@@ -18,6 +21,7 @@ public class Student {
 	private Integer age;
 	private String address;
 	
-	private Map<String, Integer> sem1=new HashMap<>();
-	private Map<String, Integer> sem2=new HashMap<>();
+	private Semister1 semister1;
+	
+	private Semister2 semister2;
 }
