@@ -10,8 +10,9 @@ import com.salesken.repository.StudentRepository;
 
 public class StudentServiceImpl implements StudentService{
 
-	@Autowired(required = false)
+	@Autowired
 	StudentRepository studentRepository;
+	
 	@Override
 	public Student addStudent(Student student)throws StudentException {
 		Optional<Student> s=studentRepository.findById(student.getRoll());

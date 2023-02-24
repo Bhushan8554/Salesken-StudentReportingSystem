@@ -1,7 +1,5 @@
 package com.salesken.model;
 
-import java.util.HashMap;
-import java.util.Map;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -18,7 +16,6 @@ public class Student {
 	@Id
 	private Integer roll;
 	private String name;
-	private Integer age;
 	private String address;
 	
 	private Semister1 semister1;

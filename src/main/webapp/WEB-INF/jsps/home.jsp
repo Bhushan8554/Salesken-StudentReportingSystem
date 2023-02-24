@@ -34,7 +34,7 @@
     
     <div class="options">
         <button>
-            Add Student
+            <a href="/student">Add Student</a>
         </button><br>
         <button>
             Add Student Marks
