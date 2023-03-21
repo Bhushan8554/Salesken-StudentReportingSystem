@@ -4,20 +4,44 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Student Report</title>
 <style>
-    table 
-{border:  1px solid;
+table ,td,th,tr {
+    border:  1px solid black;
     margin: auto;
-    
+    padding: 10px;
+    background-color: aquamarine;
+}
+body{
+        background-color:cornflowerblue;
+    }
+th{
+    background-color: aqua;
+    color: red;
+
 }
 h2{
     text-align: center;
+    color: aliceblue;
 }
+a{
+        text-decoration: none;
+        color: aliceblue;
+        
+    }
+    .btn{
+        
+        background-color: blue;
+        color: wheat;
+    }
 </style>
 </head>
 <body>
-
+    <button class="btn">
+        <a href="/">
+            Go to home
+        </a>
+</button>
 <h2>student name ${data.name}</h2>
 <h2>student roll ${data.roll}</h2>
 <table>
@@ -40,13 +64,13 @@ h2{
             1
         </td>
         <td>
-            ${data.semister1.math}
+            ${data.semester1.math}
         </td>
         <td>
-            ${data.semister1.english}
+            ${data.semester1.english}
         </td>
         <td>
-            ${data.semister1.science}
+            ${data.semester1.science}
         </td>
 
     </tr>
@@ -55,13 +79,13 @@ h2{
             2
         </td>
         <td>
-            ${data.semister2.math}
+            ${data.semester2.math}
         </td>
         <td>
-            ${data.semister2.english}
+            ${data.semester2.english}
         </td>
         <td>
-            ${data.semister2.science}
+            ${data.semester2.science}
         </td>
 
     </tr>

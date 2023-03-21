@@ -10,6 +10,10 @@
     <style>
         h1{
             text-align: center;
+            color: aliceblue;
+        }
+        body{
+            background-color:cornflowerblue ;
         }
         form{
             margin: auto;
@@ -18,17 +22,35 @@
             flex-direction: column;
             width: 200px;
             border: 1px solid;
-            padding: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: aquamarine;
+        }
+        input{
+            padding: 5px;
+            border-radius: 5px;
         }
         button{
-           margin: auto;
-           width: 100px;
+            width: 150px;
+            background-color:blue;
+            color: aliceblue;
+            margin: auto;
+            padding: 10px;
         }
         a{
             text-decoration: none;
-            color: black;
+            color: aliceblue;
         }
-
+        a{
+        text-decoration: none;
+        color: aliceblue;
+        
+    }
+    .btn{
+        
+        background-color: blue;
+        color: wheat;
+    }
     </style>
 </head>
 <body>
@@ -44,13 +66,13 @@
         <form:input type="text" placeholder="name" path="name"/><br>
         <form:input type="text" placeholder="address" path="address"/><br>
 
-        <form:input type="number" placeholder="Sem1 math" path="semister1.math"/><br>
-        <form:input type="number" placeholder="Sem1 english" path="semister1.english"/><br>
-        <form:input type="number" placeholder="Sem1 science" path="semister1.science"/><br>
+        <form:input type="number" placeholder="Sem1 math" path="semester1.math"/><br>
+        <form:input type="number" placeholder="Sem1 english" path="semester1.english"/><br>
+        <form:input type="number" placeholder="Sem1 science" path="semester1.science"/><br>
 
-        <form:input type="number" placeholder="Sem2 math" path="semister2.math"/><br>
-        <form:input type="number" placeholder="Sem2 english" path="semister2.english"/><br>
-        <form:input type="number" placeholder="Sem2 science" path="semister2.science"/><br>
+        <form:input type="number" placeholder="Sem2 math" path="semester2.math"/><br>
+        <form:input type="number" placeholder="Sem2 english" path="semester2.english"/><br>
+        <form:input type="number" placeholder="Sem2 science" path="semester2.science"/><br>
         <form:button>add</form:button>
     </form:form>
 

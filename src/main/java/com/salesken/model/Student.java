@@ -18,7 +18,7 @@ public class Student {
 	private String name;
 	private String address;
 	
-	private Semister1 semister1;
+	private Semester semester1;
 	
-	private Semister2 semister2;
+	private Semester semester2;
 }

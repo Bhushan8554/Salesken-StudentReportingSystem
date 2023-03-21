@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Average</title>
 <style>
-   body{
+    body{
         background-color: cornflowerblue;
         
         color: aliceblue;
@@ -19,7 +18,7 @@
         border-radius: 10px;
         background-color: aquamarine;
         color: blue;
-        width: 150px;
+        width: 500px;
         margin: auto;
         padding: 10px;
         text-align: center;
@@ -27,6 +26,7 @@
     a{
         text-decoration: none;
         color: aliceblue;
+        
     }
     .btn{
         
@@ -42,10 +42,11 @@
             Go to home
         </a>
 </button>
-<h1>Average of all class is</h1>
+
+<h1>Somthing went wrong</h1>
 
 <h2>
-    ${avgs}
+    ${error}
 </h2>
 
 

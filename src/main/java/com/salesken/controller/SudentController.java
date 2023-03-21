@@ -30,7 +30,7 @@ public class SudentController{
 	
 	@RequestMapping(value = "/student", method = RequestMethod.POST)
 	public String studentController(@ModelAttribute("student") Student student,BindingResult r) throws StudentException {
-		System.out.println(student);
+		
 		studentService.addStudent(student);
 		return "student";
 	}
@@ -44,6 +44,10 @@ public class SudentController{
 	public String homePage() {
 		return "home";
 	}
+	@GetMapping("/error")
+	public String showError() {
+		return "error";
+	}
 	@PostMapping("/report")
 	public String getReport(@RequestParam("studentRoll")Integer roll,Model m) throws StudentException {
 		Student s= studentService.getStudent(roll);
@@ -51,54 +55,24 @@ public class SudentController{
 		return "report";
 	}
 	@PostMapping("/avg")
-	public String getavg(@RequestParam("sem")Integer roll,Model m) throws StudentException {
-		List<Student> s= studentService.getAllStudent();
-		int n=0;
-		int count=0;
-		for(Student a:s) {
-			if(roll==1) {
-				n+=a.getSemister1().getEnglish();
-				n+=a.getSemister1().getMath();
-				n+=a.getSemister1().getScience();
-			}else {
-				n+=a.getSemister2().getEnglish();
-				n+=a.getSemister2().getMath();
-				n+=a.getSemister2().getScience();
-			}
-			count++;
-		}count*=100;
-		int avg=(n/count)*100;
-		
-		m.addAttribute("avgs", avg);
+	public String getavg(@RequestParam("sem")Integer sem,Model m) throws StudentException {
+		String percentage=studentService.getAvg(sem)+" %";
+		m.addAttribute("avgs", percentage);
 		return "avg";
 	}
 	@PostMapping("/marks")
-	public String getmarks(@RequestParam("sub")String roll,Model m) throws StudentException {
-		List<Student> s= studentService.getAllStudent();
-		int n=0;
-		int count=0;
-		for(Student a:s) {
-		if(roll.equals("science")) {
-			n+=a.getSemister2().getScience();
-			n+=a.getSemister1().getScience();
-			count++;
-		}
-		if(roll.equals("math")) {
-			n+=a.getSemister1().getMath();
-			n+=a.getSemister2().getMath();
-			count++;
-				}
-		if(roll.equals("english")) {
-			n+=a.getSemister1().getEnglish();
-			n+=a.getSemister2().getEnglish();
-			count++;
-		}
-			
-			
-		}count*=2;
-		int avg=(n/count);
-		
+	public String getmarks(@RequestParam("sub")String sub,Model m) throws StudentException {
+		int avg=studentService.getMarks(sub);
 		m.addAttribute("marks", avg);
 		return "marks";
 	}
+	@GetMapping("topstudent")
+	public String getTopStudnet(Model m) throws StudentException {
+		List<Student> x=studentService.getTopStudent();
+		
+		m.addAttribute("top1", x.get(0));
+		m.addAttribute("top2", x.get(1));
+		return "tops";
+	}
+	
 }
